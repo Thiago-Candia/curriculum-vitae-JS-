@@ -1,28 +1,56 @@
 
-
-
 /* ROOT -> variables de carpeta normalize.css  */
-    :root {
-      --clr-bg-top:    #001a0f;
-      --clr-bg-mid:    #002d18;
-      --clr-bg-bot:    #000000;
-      --clr-accent:    #00ff88;
-      --clr-accent2:   #00c96a;
-      --clr-glass:     rgba(0, 255, 136, 0.06);
-      --clr-glass-border: rgba(0, 255, 136, 0.18);
-      --clr-text:      #e8fff4;
-      --clr-muted:     #7dba9a;
-      --font-display:  'Syne', sans-serif;
-      --font-mono:     'Space Mono', monospace;
-      --radius:        16px;
-      --nav-h:         64px;
-    }
+  :root {
+    --clr-bg-top:    #001a0f;
+    --clr-bg-mid:    #002d18;
+    --clr-bg-bot:    #000000;
+    --clr-accent:    #00ff88;
+    --clr-accent2:   #00c96a;
+    --clr-glass:     rgba(0, 255, 136, 0.06);
+    --clr-glass-border: rgba(0, 255, 136, 0.18);
+    --clr-text:      #e8fff4;
+    --clr-muted:     #7dba9a;
+    --font-display:  'Syne', sans-serif;
+    --font-mono:     'Space Mono', monospace;
+    --radius:        16px;
+    --nav-h:         64px;
+  }
 
 
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/Space_Mono/SpaceMono-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Space Mono';
+  src: url('./assets/fonts/Space_Mono/SpaceMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Space Mono';
+  src: url('./assets/fonts/Space_Mono/SpaceMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Space Mono';
+  src: url('./assets/fonts/Space_Mono/SpaceMono-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Space Mono';
+  src: url('./assets/fonts/Space_Mono/SpaceMono-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
 
-    /* Reset y Base */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+  /* Reset y Base */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
 
     body {
       font-family: var(--font-display);
@@ -62,7 +90,7 @@
 
 
 
-    /* ── Nav ── */
+    /* nav */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -100,14 +128,14 @@
     }
     .nav-links a:hover { color: var(--clr-accent); }
 
-    /* ── Wrapper ── */
+    /* Wrapper */
     .wrapper {
       position: relative;
       z-index: 1;
       padding-top: var(--nav-h);
     }
 
-    /* ── Section base ── */
+    /* Section base */
     section {
       padding: 100px 80px;
       max-width: 1300px;
@@ -140,7 +168,7 @@
       border-radius: 2px;
     }
 
-    /* ── Glass card ── */
+    /* Glass card */
     .glass {
       background: var(--clr-glass);
       border: 1px solid var(--clr-glass-border);
@@ -155,9 +183,7 @@
       box-shadow: 0 16px 48px rgba(0,255,136,.1);
     }
 
-    /* ══════════════════════════════════
-       HERO
-    ══════════════════════════════════ */
+    /* HERO */
     #hero {
       min-height: calc(100vh - var(--nav-h));
       display: flex;
@@ -396,9 +422,7 @@
       line-height: 1.75;
     }
 
-    /* ══════════════════════════════════
-       EXPERIENCIA
-    ══════════════════════════════════ */
+      /* EXPERIENCIA */
     .exp-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -547,7 +571,7 @@
     }
 
     /* ══════════════════════════════════
-       FOOTER
+      FOOTER
     ══════════════════════════════════ */
     footer {
       position: relative;

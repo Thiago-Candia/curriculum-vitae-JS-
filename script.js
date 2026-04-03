@@ -1,18 +1,16 @@
-    // boton de scroll para volver al inicio
-    const scrollBtn = document.getElementById('scroll-top'); //busco elemento por id 'scroll top'
-    // evento cada vez que se haga scroll
+
+    // scroll to top
+    const scrollBtn = document.getElementById('scroll-top');
     window.addEventListener('scroll', () => {
-      scrollBtn.classList.toggle('show', window.scrollY > 400); // si el scroll es mayor a 400px se agrega la clase 'show' al btn
+      scrollBtn.classList.toggle('show', window.scrollY > 400);
     });
     scrollBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    }); // si se hace click en el btn se hace scroll hacia arriba
-
+    });
 
     // reveal de secciones 
-    const sections = document.querySelectorAll('section:not(#hero)'); // selecciona todas las secciones excepto el hero
-    // intersectionObserver -> API vigila si un elemento se encuentra en el viewport 
-    //entries es la lista de elementos que cambiaron.
+    const sections = document.querySelectorAll('section:not(#hero)'); 
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
