@@ -283,13 +283,13 @@
     .btn-outline:hover { background: rgba(0,255,136,.1); transform: translateY(-2px); }
 
     .hero-social { display: flex; gap: 20px; }
-    .hero-social a {
+    .hero-social .hero-social-link {
       color: var(--clr-muted);
       font-size: 1.4rem;
       text-decoration: none;
       transition: color .25s, transform .2s;
     }
-    .hero-social a:hover { color: var(--clr-accent); transform: translateY(-3px); }
+    .hero-social .hero-social-link:hover { color: var(--clr-accent); transform: translateY(-3px); }
 
     /* Avatar */
     .hero-avatar {
