@@ -23,10 +23,31 @@
 
 
     // Form de contacto
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault(); 
+    const form = document.getElementById('contact-form');
+
       const msg = document.getElementById('form-msg');
-      msg.style.display = 'block';
-      this.reset();
+
+      form.addEventListener('submit', function(e) {
+      e.preventDefault(); 
+
+      msg.style.display = "block";
+      msg.textContent = "Enviando...";
+
+      emailjs.sendForm(
+        'service_9fnrppt', 
+        'template_2z3pp7o', 
+        this
+      )
+    .then(() => {
+      msg.style.display = "block";
+      msg.textContent = "✓ Mensaje enviado correctamente";
+      form.reset();
+      setTimeout(() => { msg.style.display = 'none'; }, 5000);
+    })
+    .catch((error) => {
+      msg.style.display = "block";
+      msg.textContent = "❌ Error al enviar el mensaje";
+      console.error(error);
       setTimeout(() => { msg.style.display = 'none'; }, 5000);
     });
+  });
